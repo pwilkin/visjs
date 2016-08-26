@@ -171,6 +171,14 @@ public class Node extends Nodes {
         public abstract void onFired(ClickEvent event);
     }
 
+    public static abstract class NodeContextListener extends NodeListener {
+        public NodeContextListener(Node node) {
+            super(node);
+        }
+
+        public abstract void onFired(ClickEvent event);
+    }
+
     public static abstract class NodeDoubleClickListener extends NodeListener {
         public NodeDoubleClickListener(Node node) {
             super(node);

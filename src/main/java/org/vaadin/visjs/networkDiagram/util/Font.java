@@ -1,16 +1,14 @@
 package org.vaadin.visjs.networkDiagram.util;
 
 
-import com.google.gson.annotations.SerializedName;
-
 public class Font {
 
-    private String color = "#343434";
-    private int size = 14;
-    private String face = "arial";
+    private String color;
+    private Integer size;
+    private String face;
     private String background;
-    private int strokeWidth = 2;
-    private String strokeColor = "#ffffff";
+    private Integer strokeWidth;
+    private String strokeColor;
    /* private Align align = Align.horizontal;
 
     enum Align{
@@ -33,11 +31,11 @@ public class Font {
         this.color = color;
     }
 
-    public int getSize() {
+    public Integer getSize() {
         return size;
     }
 
-    public void setSize(int size) {
+    public void setSize(Integer size) {
         this.size = size;
     }
 
@@ -57,11 +55,11 @@ public class Font {
         this.background = background;
     }
 
-    public int getStrokeWidth() {
+    public Integer getStrokeWidth() {
         return strokeWidth;
     }
 
-    public void setStrokeWidth(int strokeWidth) {
+    public void setStrokeWidth(Integer strokeWidth) {
         this.strokeWidth = strokeWidth;
     }
 

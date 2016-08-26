@@ -11,20 +11,20 @@ you may want to consider picking a different type of smooth curves than dynamic 
  */
 public class Smooth {
 
-    private boolean enabled =  true;
-    private Type type = Type.dynamic;
+    private Boolean enabled;
+    private Type type;
     /*
     Accepted range: 0 .. 1.0
     This parameter tweaks the roundness of the smooth curves for all types EXCEPT dynamic.
      */
-    private float roundness =  0.5f;
+    private Float roundness;
 
 
-    public boolean isEnabled() {
+    public Boolean isEnabled() {
         return enabled;
     }
 
-    public void setEnabled(boolean enabled) {
+    public void setEnabled(Boolean enabled) {
         this.enabled = enabled;
     }
 
@@ -36,11 +36,11 @@ public class Smooth {
         this.type = type;
     }
 
-    public float getRoundness() {
+    public Float getRoundness() {
         return roundness;
     }
 
-    public void setRoundness(float roundness) {
+    public void setRoundness(Float roundness) {
         this.roundness = roundness;
     }
 

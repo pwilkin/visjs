@@ -1,6 +1,5 @@
 package org.vaadin.visjs.networkDiagram.options;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -14,8 +13,7 @@ public class Groups {
     the module loops over the groups it does have, allocating one for each unknown group.
     When all are used, it goes back to the first group. By setting this to false, the default groups will not be used in this cycle.
      */
-    boolean useDefaultGroups = true;
-
+    Boolean useDefaultGroups;
 
     private Map<String, Group> groups = new HashMap();
 

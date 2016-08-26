@@ -15,11 +15,11 @@ public class Physics {
     Toggle the physics system on or off. This property is optional.
     If you define any of the options below and enabled is undefined, this will be set to true.
      */
-    boolean enabled = true;
+    Boolean enabled;
     /*
     BarnesHut is a quadtree based gravity model. This is the fastest, default and recommended solver for non-hierarchical layouts.
      */
-    private BarnesHut barnesHut = new BarnesHut();
+    private BarnesHut barnesHut;
     /*
     Force Atlas 2 has been developed by <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0098679"
     target="_blank">Jacomi <i>et al</i> (2014)</a> for use with Gephi.
@@ -29,70 +29,70 @@ public class Physics {
     multiplier based on the amount of connected edges plus one.
      */
 
-    private ForceAtlas2Based forceAtlas2Based = new ForceAtlas2Based();
+    private ForceAtlas2Based forceAtlas2Based;
     /*
     The repulsion model assumes nodes have a simplified repulsion field around them.
     It's force linearly decreases from 1 (at 0.5*nodeDistance and smaller) to 0 (at 2*nodeDistance).
      */
-    private Repulsion repulsion = new Repulsion();
+    private Repulsion repulsion;
     /*
     This model is based on the repulsion solver but the levels are taken into account and the forces are normalized.
      */
-    private HierarchicalRepulsion hierarchicalRepulsion = new HierarchicalRepulsion();
+    private HierarchicalRepulsion hierarchicalRepulsion;
     /*
     The physics module limits the maximum velocity of the nodes to increase the time to stabilization. This is the maximium value.
      */
-    float maxVelocity = 50;
+    Float maxVelocity;
     /*
     Once the minimum velocity is reached for all nodes, we assume the network has been stabilized and the simulation stops.
      */
-    float minVelocity = 0.1f;
+    Float minVelocity;
     /*
     You can select your own solver. Possible options: 'barnesHut', 'repulsion', 'hierarchicalRepulsion',
     'forceAtlas2Based'. When setting the hierarchical layout, the hierarchical repulsion solver is automaticaly selected,
      regardless of what you fill in here.
      */
-    Solver solver = Solver.barnesHut;
+    Solver solver;
     /*
     When true, the network is stabilized on load using default settings. If false, stabilization is disabled.
     To further customize this, you can supply an object.
      */
-    Stabilization stabilization = new Stabilization();
+    Stabilization stabilization;
     /*
    The physics simulation is discrete. This means we take a step in time, calculate the forces, move the nodes and take another step.
    If you increase this number the steps will be too large and the network can get unstable.
    If you see a lot of jittery movement in the network, you may want to reduce this value a little.
     */
-    float timestep = 0.5f;
+    Float timestep;
     /*
     If this is enabled, the timestep will intelligently be adapted (only during the stabilization stage if stabilization is enabled!)
     to greatly decrease stabilization times.The timestep configured above is taken as the minimum timestep.
     This can be further improved by using the improvedLayout algorithm.
      */
-    boolean adaptiveTimestep = true;
+    Boolean adaptiveTimestep;
 
 
-    public boolean isEnabled() {
+    public Boolean isEnabled() {
         return enabled;
     }
 
-    public void setEnabled(boolean enabled) {
+    public void setEnabled(Boolean enabled) {
         this.enabled = enabled;
     }
 
-    public float getMaxVelocity() {
+    public Float getMaxVelocity() {
         return maxVelocity;
     }
 
-    public void setMaxVelocity(float maxVelocity) {
+    public void setMaxVelocity(Float maxVelocity) {
         this.maxVelocity = maxVelocity;
     }
 
-    public float getMinVelocity() {
+    public Float getMinVelocity() {
         return minVelocity;
     }
 
-    public void setMinVelocity(float minVelocity) {
+    public void setMinVelocity(Float minVelocity) {
         this.minVelocity = minVelocity;
     }
 
@@ -112,19 +112,19 @@ public class Physics {
         this.stabilization = stabilization;
     }
 
-    public float getTimestep() {
+    public Float getTimestep() {
         return timestep;
     }
 
-    public void setTimestep(float timestep) {
+    public void setTimestep(Float timestep) {
         this.timestep = timestep;
     }
 
-    public boolean isAdaptiveTimestep() {
+    public Boolean isAdaptiveTimestep() {
         return adaptiveTimestep;
     }
 
-    public void setAdaptiveTimestep(boolean adaptiveTimestep) {
+    public void setAdaptiveTimestep(Boolean adaptiveTimestep) {
         this.adaptiveTimestep = adaptiveTimestep;
     }
 

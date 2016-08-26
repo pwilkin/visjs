@@ -5,13 +5,13 @@ package org.vaadin.visjs.networkDiagram.util;
  */
 public class Color {
 
-    private String hover = "#848484";
-    private String highlight = "#D2E5FF";
-    private String border = "#2B7CE9";
-    private String background = "#97C2FC";
-    private String color = "#df6b1d";
-    private float opacity = 1.0f;
-    private String inherit= "from";
+    private String hover;
+    private String highlight;
+    private String border;
+    private String background;
+    private String color;
+    private Float opacity = 1.0f;
+    private String inherit;
 
     public Color() {
     }
@@ -78,11 +78,11 @@ public class Color {
         this.color = color;
     }
 
-    public float getOpacity() {
+    public Float getOpacity() {
         return opacity;
     }
 
-    public void setOpacity(float opacity) {
+    public void setOpacity(Float opacity) {
         this.opacity = opacity;
     }
 

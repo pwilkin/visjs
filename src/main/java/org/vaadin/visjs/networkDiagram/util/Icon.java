@@ -4,10 +4,10 @@ package org.vaadin.visjs.networkDiagram.util;
 import com.google.gson.annotations.SerializedName;
 
 public class Icon {
-    private Face face = Face.FontAwesome;
+    private Face face;
     private String code;
-    private int size = 50;
-    private String color = "#2B7CE9";
+    private Integer size;
+    private String color;
 
     public enum Face{
         @SerializedName("FontAwesome")
@@ -32,11 +32,11 @@ public class Icon {
         this.code = code;
     }
 
-    public int getSize() {
+    public Integer getSize() {
         return size;
     }
 
-    public void setSize(int size) {
+    public void setSize(Integer size) {
         this.size = size;
     }
 

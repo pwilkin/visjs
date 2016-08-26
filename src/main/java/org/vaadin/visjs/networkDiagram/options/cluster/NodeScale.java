@@ -5,31 +5,31 @@ package org.vaadin.visjs.networkDiagram.options.cluster;
  */
 public class NodeScale {
 
-    private int width   = 10;
-    private int height  = 10;
-    private int radius  = 10;
+    private Integer width;
+    private Integer height;
+    private Integer radius;
 
-    public int getWidth() {
+    public Integer getWidth() {
         return width;
     }
 
-    public void setWidth(int width) {
+    public void setWidth(Integer width) {
         this.width = width;
     }
 
-    public int getHeight() {
+    public Integer getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(Integer height) {
         this.height = height;
     }
 
-    public int getRadius() {
+    public Integer getRadius() {
         return radius;
     }
 
-    public void setRadius(int radius) {
+    public void setRadius(Integer radius) {
         this.radius = radius;
     }
 }

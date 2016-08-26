@@ -2,22 +2,22 @@ package org.vaadin.visjs.networkDiagram.util;
 
 
 public class Fixed {
-    boolean x = false;
-    boolean y = false;
+    Boolean x;
+    Boolean y;
 
-    public boolean isX() {
+    public Boolean isX() {
         return x;
     }
 
-    public void setX(boolean x) {
+    public void setX(Boolean x) {
         this.x = x;
     }
 
-    public boolean isY() {
+    public Boolean isY() {
         return y;
     }
 
-    public void setY(boolean y) {
+    public void setY(Boolean y) {
         this.y = y;
     }
 }

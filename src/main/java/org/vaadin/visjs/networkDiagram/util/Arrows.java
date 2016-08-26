@@ -3,36 +3,32 @@ package org.vaadin.visjs.networkDiagram.util;
 
 public class Arrows {
 
-    ArrowOptions to = new ArrowOptions();
-    ArrowOptions middle = new ArrowOptions();
-    ArrowOptions from = new ArrowOptions();
+    ArrowOptions to;
+    ArrowOptions middle;
+    ArrowOptions from;
 
-    private class ArrowOptions {
-        boolean enabled = false;
-        float scaleFactor = 1;
+    public static class ArrowOptions {
+        Boolean enabled;
+        Float scaleFactor;
 
-        public ArrowOptions(boolean enabled, float scaleFactor) {
+        public ArrowOptions(Boolean enabled, Float scaleFactor) {
             this.enabled = enabled;
             this.scaleFactor = scaleFactor;
         }
 
-        public ArrowOptions() {
-
-        }
-
-        public boolean isEnabled() {
+        public Boolean isEnabled() {
             return enabled;
         }
 
-        public void setEnabled(boolean enabled) {
+        public void setEnabled(Boolean enabled) {
             this.enabled = enabled;
         }
 
-        public float getScaleFactor() {
+        public Float getScaleFactor() {
             return scaleFactor;
         }
 
-        public void setScaleFactor(float scaleFactor) {
+        public void setScaleFactor(Float scaleFactor) {
             this.scaleFactor = scaleFactor;
         }
 

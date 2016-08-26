@@ -2,6 +2,8 @@ package org.vaadin.visjs.networkDiagram;
 
 import com.google.gson.annotations.SerializedName;
 import org.vaadin.visjs.networkDiagram.options.modules.Edges;
+import org.vaadin.visjs.networkDiagram.util.Arrows;
+import org.vaadin.visjs.networkDiagram.util.Arrows.ArrowOptions;
 import org.vaadin.visjs.networkDiagram.util.Color;
 
 /**
@@ -62,35 +64,40 @@ public class Edge extends Edges{
     public Edge(int from,int to,Edge.Style style){
         this.from = Integer.toString(from);
         this.to =Integer.toString(to) ;
+        setStyle(style);
     }
 
     public Edge(String from, String to,Edge.Style style){
         this.from =  from;
         this.to = to ;
+        setStyle(style);
     }
 
     public Edge(int from,int to,Edge.Style style, int width){
         this.from = Integer.toString(from);
         this.to =Integer.toString(to) ;
         setWidth(width);
+        setStyle(style);
     }
     public Edge(String from, String to,Edge.Style style, int width){
         this.from =  from;
         this.to = to ;
         setWidth(width);
-
+        setStyle(style);
     }
 
     public Edge(int from,int to,Edge.Style style,Color color){
         this.from = Integer.toString(from);
         this.to =Integer.toString(to) ;
         setColor(color);
+        setStyle(style);
     }
 
     public Edge(String from, String to,Edge.Style style,Color color){
         this.from =  from;
         this.to = to ;
         setColor(color);
+        setStyle(style);
     }
 
     public Edge(int from,int to,Edge.Style style,Color color, int width ){
@@ -98,6 +105,7 @@ public class Edge extends Edges{
         this.to =Integer.toString(to) ;
         setColor(color);
         setWidth(width);
+        setStyle(style);
     }
 
     public Edge(String from, String to,Edge.Style style,Color color, int width ){
@@ -105,6 +113,7 @@ public class Edge extends Edges{
         this.to = to ;
         setColor(color);
         setWidth(width);
+        setStyle(style);
     }
 
     public String getId() {
@@ -140,5 +149,30 @@ public class Edge extends Edges{
         arrowCenter,
         @SerializedName("dash-line")
         dashLine;
+    }
+
+    public void setStyle(Style style) {
+        switch (style) {
+            case line:
+                setDashes(false);
+                setArrows(null);
+                break;
+            case arrow:
+                setDashes(false);
+                Arrows to = new Arrows();
+                to.setTo(new ArrowOptions(true, null));
+                setArrows(to);
+                break;
+            case arrowCenter:
+                setDashes(false);
+                Arrows middle = new Arrows();
+                middle.setMiddle(new ArrowOptions(true, null));
+                setArrows(middle);
+                break;
+            case dashLine:
+                setDashes(true);
+                setArrows(null);
+                break;
+        }
     }
 }

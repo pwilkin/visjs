@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
  */
 public class SmoothCurves {
 
-    boolean dynamic = true;
+    Boolean dynamic;
     Type type = Type.continuous;
-    float roundness = 0.5f;
+    Float roundness;
 
     public static enum Type {
         @SerializedName("continuous")
@@ -24,11 +24,11 @@ public class SmoothCurves {
         vertical
     }
 
-    public boolean isDynamic() {
+    public Boolean isDynamic() {
         return dynamic;
     }
 
-    public void setDynamic(boolean dynamic) {
+    public void setDynamic(Boolean dynamic) {
         this.dynamic = dynamic;
     }
 
@@ -40,11 +40,11 @@ public class SmoothCurves {
         this.type = type;
     }
 
-    public float getRoundness() {
+    public Float getRoundness() {
         return roundness;
     }
 
-    public void setRoundness(float roundness) {
+    public void setRoundness(Float roundness) {
         this.roundness = roundness;
     }
 

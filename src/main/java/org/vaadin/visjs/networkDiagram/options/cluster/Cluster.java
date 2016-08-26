@@ -5,142 +5,142 @@ package org.vaadin.visjs.networkDiagram.options.cluster;
  */
 public class Cluster {
 
-    private int initialMaxNodes = 100;
-    private int clusterThreshold = 500;
-    private int reduceToNodes = 300;
-    private int clusterEdgeThreshold = 20;
-    private int sectorThreshold = 50;
-    private int maxFontSize = 1000;
-    private int edgeGrowth = 20;
-    private int maxNodeSizeIncrements = 600;
-    private int activeAreaBoxSize = 100;
-    private int clusterLevelDifference = 2;
+    private Integer initialMaxNodes;
+    private Integer clusterThreshold;
+    private Integer reduceToNodes;
+    private Integer clusterEdgeThreshold;
+    private Integer sectorThreshold;
+    private Integer maxFontSize;
+    private Integer edgeGrowth;
+    private Integer maxNodeSizeIncrements;
+    private Integer activeAreaBoxSize;
+    private Integer clusterLevelDifference;
 
-    private float chainThreshold = 0.4f;
-    private float screenSizeThreshold = 0.2f;
-    private float fontSizeMultiplier = 4.0f;
-    private float forceAmplification = 0.6f;
-    private float distanceAmplification = 0.2f;
+    private Float chainThreshold;
+    private Float screenSizeThreshold;
+    private Float fontSizeMultiplier;
+    private Float forceAmplification;
+    private Float distanceAmplification;
 
-    private NodeScale nodeScaling = new NodeScale();
+    private NodeScale nodeScaling;
 
-    public int getInitialMaxNodes() {
+    public Integer getInitialMaxNodes() {
         return initialMaxNodes;
     }
 
-    public void setInitialMaxNodes(int initialMaxNodes) {
+    public void setInitialMaxNodes(Integer initialMaxNodes) {
         this.initialMaxNodes = initialMaxNodes;
     }
 
-    public int getClusterThreshold() {
+    public Integer getClusterThreshold() {
         return clusterThreshold;
     }
 
-    public void setClusterThreshold(int clusterThreshold) {
+    public void setClusterThreshold(Integer clusterThreshold) {
         this.clusterThreshold = clusterThreshold;
     }
 
-    public int getReduceToNodes() {
+    public Integer getReduceToNodes() {
         return reduceToNodes;
     }
 
-    public void setReduceToNodes(int reduceToNodes) {
+    public void setReduceToNodes(Integer reduceToNodes) {
         this.reduceToNodes = reduceToNodes;
     }
 
-    public int getClusterEdgeThreshold() {
+    public Integer getClusterEdgeThreshold() {
         return clusterEdgeThreshold;
     }
 
-    public void setClusterEdgeThreshold(int clusterEdgeThreshold) {
+    public void setClusterEdgeThreshold(Integer clusterEdgeThreshold) {
         this.clusterEdgeThreshold = clusterEdgeThreshold;
     }
 
-    public int getSectorThreshold() {
+    public Integer getSectorThreshold() {
         return sectorThreshold;
     }
 
-    public void setSectorThreshold(int sectorThreshold) {
+    public void setSectorThreshold(Integer sectorThreshold) {
         this.sectorThreshold = sectorThreshold;
     }
 
-    public int getMaxFontSize() {
+    public Integer getMaxFontSize() {
         return maxFontSize;
     }
 
-    public void setMaxFontSize(int maxFontSize) {
+    public void setMaxFontSize(Integer maxFontSize) {
         this.maxFontSize = maxFontSize;
     }
 
-    public int getEdgeGrowth() {
+    public Integer getEdgeGrowth() {
         return edgeGrowth;
     }
 
-    public void setEdgeGrowth(int edgeGrowth) {
+    public void setEdgeGrowth(Integer edgeGrowth) {
         this.edgeGrowth = edgeGrowth;
     }
 
-    public int getMaxNodeSizeIncrements() {
+    public Integer getMaxNodeSizeIncrements() {
         return maxNodeSizeIncrements;
     }
 
-    public void setMaxNodeSizeIncrements(int maxNodeSizeIncrements) {
+    public void setMaxNodeSizeIncrements(Integer maxNodeSizeIncrements) {
         this.maxNodeSizeIncrements = maxNodeSizeIncrements;
     }
 
-    public int getActiveAreaBoxSize() {
+    public Integer getActiveAreaBoxSize() {
         return activeAreaBoxSize;
     }
 
-    public void setActiveAreaBoxSize(int activeAreaBoxSize) {
+    public void setActiveAreaBoxSize(Integer activeAreaBoxSize) {
         this.activeAreaBoxSize = activeAreaBoxSize;
     }
 
-    public int getClusterLevelDifference() {
+    public Integer getClusterLevelDifference() {
         return clusterLevelDifference;
     }
 
-    public void setClusterLevelDifference(int clusterLevelDifference) {
+    public void setClusterLevelDifference(Integer clusterLevelDifference) {
         this.clusterLevelDifference = clusterLevelDifference;
     }
 
-    public float getChainThreshold() {
+    public Float getChainThreshold() {
         return chainThreshold;
     }
 
-    public void setChainThreshold(float chainThreshold) {
+    public void setChainThreshold(Float chainThreshold) {
         this.chainThreshold = chainThreshold;
     }
 
-    public float getScreenSizeThreshold() {
+    public Float getScreenSizeThreshold() {
         return screenSizeThreshold;
     }
 
-    public void setScreenSizeThreshold(float screenSizeThreshold) {
+    public void setScreenSizeThreshold(Float screenSizeThreshold) {
         this.screenSizeThreshold = screenSizeThreshold;
     }
 
-    public float getFontSizeMultiplier() {
+    public Float getFontSizeMultiplier() {
         return fontSizeMultiplier;
     }
 
-    public void setFontSizeMultiplier(float fontSizeMultiplier) {
+    public void setFontSizeMultiplier(Float fontSizeMultiplier) {
         this.fontSizeMultiplier = fontSizeMultiplier;
     }
 
-    public float getForceAmplification() {
+    public Float getForceAmplification() {
         return forceAmplification;
     }
 
-    public void setForceAmplification(float forceAmplification) {
+    public void setForceAmplification(Float forceAmplification) {
         this.forceAmplification = forceAmplification;
     }
 
-    public float getDistanceAmplification() {
+    public Float getDistanceAmplification() {
         return distanceAmplification;
     }
 
-    public void setDistanceAmplification(float distanceAmplification) {
+    public void setDistanceAmplification(Float distanceAmplification) {
         this.distanceAmplification = distanceAmplification;
     }
 

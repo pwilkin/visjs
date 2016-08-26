@@ -6,11 +6,11 @@ public class Scaling {
         the scaling function and the min max values.
          The min value is the minimum allowed value.
          */
-    private int min = 1;
+    private Integer min;
     /*
     This is the maximum allowed width when the edges are scaled using the value option.
      */
-    private int max = 100;
+    private Integer max;
 
     /*
     When false, the label is not allowed to scale with the edge.
@@ -48,28 +48,27 @@ public class Scaling {
      */
     private String customScalingFunction;
 
-
     public class Label{
         /*
                 Toggle the scaling of the label on or off.
                  If this option is not defined, it is set to true if any of the properties in this
                   object are defined.
                  */
-        boolean enabled = false;
+        Boolean enabled;
         /*
         The minimum font-size used for labels when scaling
          */
-        int min = 14;
+        Integer min;
         /*
         The maximum font-size used for labels when scaling.
          */
-        int max = 30;
+        Integer max;
         /*
         When zooming in, the font is drawn larger as well.
         You can limit the perceived font size using this option.
         If set to 30, the font will never look larger than size 30 zoomed at 100%.
          */
-        int maxVisible = 30;
+        Integer maxVisible;
         /*
         When zooming out, the font will be drawn smaller.
         This defines a lower limit for when the font is drawn.
@@ -77,64 +76,64 @@ public class Scaling {
         maxVisible to first show labels of important edges when zoomed
         out and only show the rest when zooming in.
          */
-        int drawThreshold = 5;
+        Integer drawThreshold;
 
-        public boolean isEnabled() {
+        public Boolean isEnabled() {
             return enabled;
         }
 
-        public void setEnabled(boolean enabled) {
+        public void setEnabled(Boolean enabled) {
             this.enabled = enabled;
         }
 
-        public int getMin() {
+        public Integer getMin() {
             return min;
         }
 
-        public void setMin(int min) {
+        public void setMin(Integer min) {
             this.min = min;
         }
 
-        public int getMax() {
+        public Integer getMax() {
             return max;
         }
 
-        public void setMax(int max) {
+        public void setMax(Integer max) {
             this.max = max;
         }
 
-        public int getMaxVisible() {
+        public Integer getMaxVisible() {
             return maxVisible;
         }
 
-        public void setMaxVisible(int maxVisible) {
+        public void setMaxVisible(Integer maxVisible) {
             this.maxVisible = maxVisible;
         }
 
-        public int getDrawThreshold() {
+        public Integer getDrawThreshold() {
             return drawThreshold;
         }
 
-        public void setDrawThreshold(int drawThreshold) {
+        public void setDrawThreshold(Integer drawThreshold) {
             this.drawThreshold = drawThreshold;
         }
 
 
     }
 
-    public int getMin() {
+    public Integer getMin() {
         return min;
     }
 
-    public void setMin(int min) {
+    public void setMin(Integer min) {
         this.min = min;
     }
 
-    public int getMax() {
+    public Integer getMax() {
         return max;
     }
 
-    public void setMax(int max) {
+    public void setMax(Integer max) {
         this.max = max;
     }
 

@@ -32,6 +32,9 @@ window.org_vaadin_visjs_networkDiagram_NetworkDiagram = function () {
         graph.on('click', function (properties) {
             self.onClick(properties);
         });
+        graph.on('oncontext', function (properties) {
+            self.onContext(properties);
+        });
         graph.on('doubleClick', function (properties) {
             self.onDoubleClick(properties);
         });

@@ -15,7 +15,6 @@ public class Locale {
     private String deleteClusterError= "Clusters cannot be deleted.";
     private String editClusterError= "Clusters cannot be edited.";
 
-
     public String getEdit() {
         return edit;
     }

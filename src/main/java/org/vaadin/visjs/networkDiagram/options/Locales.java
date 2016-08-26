@@ -2,13 +2,13 @@ package org.vaadin.visjs.networkDiagram.options;
 
 
 public class Locales {
-    Locale en = new Locale();
+    Locale locale;
 
-    public Locale getEn() {
-        return en;
+    public Locale getLocale() {
+        return locale;
     }
 
-    public void setEn(Locale en) {
-        this.en = en;
+    public void setLocale(Locale locale) {
+        this.locale = locale;
     }
 }

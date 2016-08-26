@@ -7,49 +7,49 @@ public class Shadow {
         Toggle the casting of shadows. If this option is not defined,
         it is set to true if any of the properties in this object are defined.
          */
-    private boolean enabled = false;
+    private Boolean enabled;
     /*
     The blur size of the shadow.
      */
-    private int size = 10;
+    private Integer size;
     /*
     The x offset.
      */
-    private int x = 5;
+    private Integer x;
     /*
     The y offset.
      */
-    private int y = 5;
+    private Integer y;
 
-    public boolean isEnabled() {
+    public Boolean isEnabled() {
         return enabled;
     }
 
-    public void setEnabled(boolean enabled) {
+    public void setEnabled(Boolean enabled) {
         this.enabled = enabled;
     }
 
-    public int getY() {
+    public Integer getY() {
         return y;
     }
 
-    public void setY(int y) {
+    public void setY(Integer y) {
         this.y = y;
     }
 
-    public int getSize() {
+    public Integer getSize() {
         return size;
     }
 
-    public void setSize(int size) {
+    public void setSize(Integer size) {
         this.size = size;
     }
 
-    public int getX() {
+    public Integer getX() {
         return x;
     }
 
-    public void setX(int x) {
+    public void setX(Integer x) {
         this.x = x;
     }
 

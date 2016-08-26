@@ -1,36 +1,33 @@
 package org.vaadin.visjs.networkDiagram.options;
 
-import org.vaadin.visjs.networkDiagram.options.cluster.Cluster;
 import org.vaadin.visjs.networkDiagram.options.modules.*;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.vaadin.visjs.networkDiagram.options.modules.Layout.Direction;
+import org.vaadin.visjs.networkDiagram.options.modules.Layout.Hierarchical;
 
 /**
  * Created by roshans on 10/10/14.
  */
 public class Options {
-    private boolean autoResize = true;
-    private String height = "100%";
-    private String width = "100%";
-    private String locale = "en";
-    private Locales locales = new Locales();
-    private boolean clickToUse = false;
-    private Configure configure = new Configure();
-    private Edges edges =  new Edges();
-    private Nodes nodes = new Nodes();
+    private Boolean autoResize;
+    private String height;
+    private String width;
+    private String locale;
+    private Locales locales;
+    private Boolean clickToUse;
+    private Configure configure;
+    private Edges edges;
+    private Nodes nodes;
     private Groups groups;
-    private Layout layout = new Layout();
-    private Interaction interaction = new Interaction();
-    private Manipulation manipulation= new Manipulation();
-    private Physics physics = new Physics();
+    private Layout layout;
+    private Interaction interaction;
+    private Manipulation manipulation;
+    private Physics physics;
 
-
-    public boolean isAutoResize() {
+    public Boolean isAutoResize() {
         return autoResize;
     }
 
-    public void setAutoResize(boolean autoResize) {
+    public void setAutoResize(Boolean autoResize) {
         this.autoResize = autoResize;
     }
 
@@ -66,11 +63,11 @@ public class Options {
         this.locales = locales;
     }
 
-    public boolean isClickToUse() {
+    public Boolean isClickToUse() {
         return clickToUse;
     }
 
-    public void setClickToUse(boolean clickToUse) {
+    public void setClickToUse(Boolean clickToUse) {
         this.clickToUse = clickToUse;
     }
 
@@ -136,6 +133,19 @@ public class Options {
 
     public void setPhysics(Physics physics) {
         this.physics = physics;
+    }
+
+    public static Options noPhysicsHierarchical() {
+        Options options = new Options();
+        Physics physics = new Physics();
+        physics.setEnabled(false);
+        options.setPhysics(physics);
+        Layout layout = new Layout();
+        Hierarchical hierarchical = new Hierarchical();
+        hierarchical.setDirection(Direction.UD);
+        layout.setHierarchical(hierarchical);
+        options.setLayout(layout);
+        return options;
     }
 
 }

@@ -4,112 +4,112 @@ public class Interaction {
     /*
     When true, the nodes that are not fixed can be dragged by the user.
      */
-    boolean dragNodes = true;
+    Boolean dragNodes;
     /*
     When true, the view can be dragged around by the user.
      */
-    boolean dragView = true;
+    Boolean dragView;
     /*
     When true, the edges are not drawn when dragging the view.
     This can greatly speed up responsiveness on dragging, improving user experience.
      */
-    boolean hideEdgesOnDrag = false;
+    Boolean hideEdgesOnDrag;
     /*
     When true, the nodes are not drawn when dragging the view.
     This can greatly speed up responsiveness on dragging, improving user experience.
      */
-    boolean hideNodesOnDrag = false;
+    Boolean hideNodesOnDrag;
     /*
     When true, the nodes use their hover colors when the mouse moves over them.
      */
-    boolean hover = false;
+    Boolean hover;
     /*
     When true, on hovering over a node, it's connecting edges are highlighted.
      */
-    boolean hoverConnectedEdges = true;
-    Keyboard keyboard = new Keyboard();
+    Boolean hoverConnectedEdges;
+    Keyboard keyboard;
     /*
     When true, a longheld click (or touch) as well as a control-click will add to the selection.
      */
-    boolean multiselect = false;
+    Boolean multiselect;
     /*
     When true, navigation buttons are drawn on the network canvas.
     These are HTML buttons and can be completely customized using CSS.
      */
-    boolean navigationButtons = false;
+    Boolean navigationButtons;
     /*
     When true, the nodes and edges can be selected by the user.
      */
-    boolean selectable = true;
+    Boolean selectable;
     /*
     When true, on selecting a node, its connecting edges are highlighted.
      */
-    boolean selectConnectedEdges = true;
+    Boolean selectConnectedEdges;
     /*
     When nodes or edges have a defined 'title' field, this can be shown as a pop-up tooltip.
     The tooltip itself is an HTML element that can be fully styled using CSS.
     The delay is the amount of time in milliseconds it takes before the tooltip is shown.
      */
-    int tooltipDelay = 300;
+    Integer tooltipDelay;
     /*
     When true, the user can zoom in.
      */
-    boolean zoomView = true;
+    Boolean zoomView;
 
     public class Keyboard {
         /*
         Toggle the usage of the keyboard shortcuts. If this option is not defined,
         it is set to true if any of the properties in this object are defined.
          */
-        boolean enabled = false;
-        Speed speed = new Speed();
-        boolean bindToWindow = true;
+        Boolean enabled;
+        Speed speed;
+        Boolean bindToWindow;
 
         private class Speed {
             /*
             The speed at which the view moves in the x direction on pressing a key or pressing a navigation button.
              */
-            int x = 1;
+            Integer x;
             /*
             The speed at which the view moves in the y direction on pressing a key or pressing a navigation button.
              */
-            int y = 1;
+            Integer y;
             /*
             The speed at which the view zooms in or out pressing a key or pressing a navigation button.
              */
-            float zoom = 0.02f;
+            Float zoom;
 
-            public int getX() {
+            public Integer getX() {
                 return x;
             }
 
-            public void setX(int x) {
+            public void setX(Integer x) {
                 this.x = x;
             }
 
-            public int getY() {
+            public Integer getY() {
                 return y;
             }
 
-            public void setY(int y) {
+            public void setY(Integer y) {
                 this.y = y;
             }
 
-            public float getZoom() {
+            public Float getZoom() {
                 return zoom;
             }
 
-            public void setZoom(float zoom) {
+            public void setZoom(Float zoom) {
                 this.zoom = zoom;
             }
 
         }
 
-        public boolean isEnabled() {
+        public Boolean isEnabled() {
             return enabled;
         }
 
-        public void setEnabled(boolean enabled) {
+        public void setEnabled(Boolean enabled) {
             this.enabled = enabled;
         }
 
@@ -121,60 +121,60 @@ public class Interaction {
             this.speed = speed;
         }
 
-        public boolean isBindToWindow() {
+        public Boolean isBindToWindow() {
             return bindToWindow;
         }
 
-        public void setBindToWindow(boolean bindToWindow) {
+        public void setBindToWindow(Boolean bindToWindow) {
             this.bindToWindow = bindToWindow;
         }
     }
 
-    public boolean isDragNodes() {
+    public Boolean isDragNodes() {
         return dragNodes;
     }
 
-    public void setDragNodes(boolean dragNodes) {
+    public void setDragNodes(Boolean dragNodes) {
         this.dragNodes = dragNodes;
     }
 
-    public boolean isDragView() {
+    public Boolean isDragView() {
         return dragView;
     }
 
-    public void setDragView(boolean dragView) {
+    public void setDragView(Boolean dragView) {
         this.dragView = dragView;
     }
 
-    public boolean isHideEdgesOnDrag() {
+    public Boolean isHideEdgesOnDrag() {
         return hideEdgesOnDrag;
     }
 
-    public void setHideEdgesOnDrag(boolean hideEdgesOnDrag) {
+    public void setHideEdgesOnDrag(Boolean hideEdgesOnDrag) {
         this.hideEdgesOnDrag = hideEdgesOnDrag;
     }
 
-    public boolean isHideNodesOnDrag() {
+    public Boolean isHideNodesOnDrag() {
         return hideNodesOnDrag;
     }
 
-    public void setHideNodesOnDrag(boolean hideNodesOnDrag) {
+    public void setHideNodesOnDrag(Boolean hideNodesOnDrag) {
         this.hideNodesOnDrag = hideNodesOnDrag;
     }
 
-    public boolean isHover() {
+    public Boolean isHover() {
         return hover;
     }
 
-    public void setHover(boolean hover) {
+    public void setHover(Boolean hover) {
         this.hover = hover;
     }
 
-    public boolean isHoverConnectedEdges() {
+    public Boolean isHoverConnectedEdges() {
         return hoverConnectedEdges;
     }
 
-    public void setHoverConnectedEdges(boolean hoverConnectedEdges) {
+    public void setHoverConnectedEdges(Boolean hoverConnectedEdges) {
         this.hoverConnectedEdges = hoverConnectedEdges;
     }
 
@@ -186,51 +186,51 @@ public class Interaction {
         this.keyboard = keyboard;
     }
 
-    public boolean isMultiselect() {
+    public Boolean isMultiselect() {
         return multiselect;
     }
 
-    public void setMultiselect(boolean multiselect) {
+    public void setMultiselect(Boolean multiselect) {
         this.multiselect = multiselect;
     }
 
-    public boolean isNavigationButtons() {
+    public Boolean isNavigationButtons() {
         return navigationButtons;
     }
 
-    public void setNavigationButtons(boolean navigationButtons) {
+    public void setNavigationButtons(Boolean navigationButtons) {
         this.navigationButtons = navigationButtons;
     }
 
-    public boolean isSelectable() {
+    public Boolean isSelectable() {
         return selectable;
     }
 
-    public void setSelectable(boolean selectable) {
+    public void setSelectable(Boolean selectable) {
         this.selectable = selectable;
     }
 
-    public boolean isSelectConnectedEdges() {
+    public Boolean isSelectConnectedEdges() {
         return selectConnectedEdges;
     }
 
-    public void setSelectConnectedEdges(boolean selectConnectedEdges) {
+    public void setSelectConnectedEdges(Boolean selectConnectedEdges) {
         this.selectConnectedEdges = selectConnectedEdges;
     }
 
-    public int getTooltipDelay() {
+    public Integer getTooltipDelay() {
         return tooltipDelay;
     }
 
-    public void setTooltipDelay(int tooltipDelay) {
+    public void setTooltipDelay(Integer tooltipDelay) {
         this.tooltipDelay = tooltipDelay;
     }
 
-    public boolean isZoomView() {
+    public Boolean isZoomView() {
         return zoomView;
     }
 
-    public void setZoomView(boolean zoomView) {
+    public void setZoomView(Boolean zoomView) {
         this.zoomView = zoomView;
     }
 }

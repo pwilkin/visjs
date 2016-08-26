@@ -6,6 +6,7 @@ package org.vaadin.visjs.networkDiagram.util;
 public class Constants {
     public static final String ON_SELECT = "onSelect";
     public static final String ON_CLICK = "onClick";
+    public static final String ON_CONTEXT = "onContext";
     public static final String ON_DOUBLE_CLICK = "onDoubleClick";
     public static final String ON_HOVER_NODE = "onHoverNode";
     public static final String ON_BLUR_NODE = "onBlurNode";

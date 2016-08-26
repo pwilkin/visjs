@@ -27,6 +27,7 @@ import java.util.List;
 @StyleSheet({"css/vis.min.css", "css/networkDiagram.css"})
 public class NetworkDiagram extends AbstractJavaScriptComponent {
     private List<Node.NodeSelectListener> nodeSelectListeners = new ArrayList<>();
+    private List<Node.NodeContextListener> nodeContextListeners = new ArrayList<>();
     private List<Node.NodeClickListener> nodeClickListeners = new ArrayList<>();
     private List<Node.NodeDoubleClickListener> nodeDoubleClickListeners = new ArrayList<>();
     private List<Node.NodeHoverListener> nodeHoverListeners = new ArrayList<>();
@@ -70,6 +71,13 @@ public class NetworkDiagram extends AbstractJavaScriptComponent {
             public void call(final JsonArray properties) throws JsonException {
                 ClickEvent event = EventGenerator.getNodeClickEvent(properties);
                 fireNodeClickEvent(event);
+            }
+        });
+        addFunction(Constants.ON_CONTEXT, new JavaScriptFunction() {
+            @Override
+            public void call(final JsonArray properties) throws JsonException {
+                ClickEvent event = EventGenerator.getNodeClickEvent(properties);
+                fireNodeContextEvent(event);
             }
         });
         addFunction(Constants.ON_DOUBLE_CLICK, new JavaScriptFunction() {
@@ -159,8 +167,6 @@ public class NetworkDiagram extends AbstractJavaScriptComponent {
                 //fireGraphResizeEvent();
             }
         });
-
-
 
         callFunction("init", gson.toJson(options));
     }
@@ -287,6 +293,14 @@ public class NetworkDiagram extends AbstractJavaScriptComponent {
 
     public void addNodeSelectListener(Node.NodeSelectListener listener) {
         nodeSelectListeners.add(listener);
+    }
+
+    public void addNodeContextListener(Node.NodeContextListener listener) {
+        nodeContextListeners.add(listener);
+    }
+
+    public void removeNodeContextListener(Node.NodeContextListener listener) {
+        nodeContextListeners.remove(listener);
     }
 
     public void removeNodeSelectListener(Node.NodeSelectListener listener) {
@@ -493,6 +507,16 @@ public class NetworkDiagram extends AbstractJavaScriptComponent {
     public void fireNodeClickEvent(ClickEvent event) {
         for (String nodeID : event.getNodeIds()) {
             for (Node.NodeClickListener listener : nodeClickListeners) {
+                if (listener.getNode().getId().equals(nodeID)) {
+                    listener.onFired(event);
+                }
+            }
+        }
+    }
+
+    public void fireNodeContextEvent(ClickEvent event) {
+        for (String nodeID : event.getNodeIds()) {
+            for (Node.NodeContextListener listener : nodeContextListeners) {
                 if (listener.getNode().getId().equals(nodeID)) {
                     listener.onFired(event);
                 }

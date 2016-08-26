@@ -10,11 +10,11 @@ public class Group {
 
     private Color color;
     private String image;
-    private String fontColor = "black";
-    private String fontFace = "sans";
-    private int fontSize = 14;
-    private Node.Shape shape = Node.Shape.ellipse;
-    private int radius = 5;
+    private String fontColor;
+    private String fontFace;
+    private Integer fontSize;
+    private Node.Shape shape;
+    private Integer radius;
 
     public Color getColor() {
         return color;
@@ -48,11 +48,11 @@ public class Group {
         this.fontFace = fontFace;
     }
 
-    public int getFontSize() {
+    public Integer getFontSize() {
         return fontSize;
     }
 
-    public void setFontSize(int fontSize) {
+    public void setFontSize(Integer fontSize) {
         this.fontSize = fontSize;
     }
 
@@ -64,11 +64,11 @@ public class Group {
         this.shape = shape;
     }
 
-    public int getRadius() {
+    public Integer getRadius() {
         return radius;
     }
 
-    public void setRadius(int radius) {
+    public void setRadius(Integer radius) {
         this.radius = radius;
     }
 }

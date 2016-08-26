@@ -11,33 +11,33 @@ import org.vaadin.visjs.networkDiagram.Node;
  */
 public class Nodes {
 
-    int borderWidth = 1;
-    int borderWidthSelected;
+    Integer borderWidth;
+    Integer borderWidthSelected;
     String brokenImage;
     Color color;
-    Fixed fixed = new Fixed();
-    Font font = new Font();
-    private String group = "undefined";
-    private boolean hidden = false;
+    Fixed fixed;
+    Font font;
+    private String group;
+    private Boolean hidden;
     /*
     These options are only used when the shape is set to ICON
      */
     private Icon icon;
     private String image;
     private String label;
-    private boolean labelHighlightBold;
-    private int level;
-    private int mass = 1;
-    private boolean physics = true;
-    private Scaling scaling = new Scaling();
-    private Shadow shadow = new Shadow();
-    private Node.Shape shape = Node.Shape.ellipse;
-    private ShapeProperties shapeProperties = new ShapeProperties();
+    private Boolean labelHighlightBold;
+    private Integer level;
+    private Integer mass;
+    private Boolean physics;
+    private Scaling scaling;
+    private Shadow shadow;
+    private Node.Shape shape;
+    private ShapeProperties shapeProperties;
     /*
     The size is used to determine the size of node shapes that do not have the label inside of them.
      These shapes are: image, circularImage, diamond, dot, star, triangle, triangleDown, square and icon
      */
-    private int size = 25;
+    private Integer size;
     /*
      Title to be displayed when the user hovers over the node.
      The title can be an HTML element or a string containing plain text or HTML.
@@ -46,9 +46,9 @@ public class Nodes {
     /*
     When a value is set, the nodes will be scaled using the options in the scaling object defined above.
      */
-    private int value;
-    //private int x;
-    //private int y;
+    private Integer value;
+    //private Integer x;
+    //private Integer y;
 
 
     /** This gives a node an initial x position. When using the hierarchical layout, either the x or y position is set by
@@ -56,28 +56,28 @@ public class Nodes {
      * the stabilized position may be different from the initial one. To lock the node to that position use the physics
      * or fixed options.
     * */
-    private int x;
+    private Integer x;
 
   /*  * This gives a node an initial y position. When using the hierarchical layout, either the x or y position is set by
      * the layout engine depending on the type of view. The other value remains untouched. When using stabilization, the
       * stabilized position may be different from the initial one. To lock the node to that position use the physics or
       * fixed options.
     * */
-    private int y;
+    private Integer y;
 
-    public int getBorderWidth() {
+    public Integer getBorderWidth() {
         return borderWidth;
     }
 
-    public void setBorderWidth(int borderWidth) {
+    public void setBorderWidth(Integer borderWidth) {
         this.borderWidth = borderWidth;
     }
 
-    public int getBorderWidthSelected() {
+    public Integer getBorderWidthSelected() {
         return borderWidthSelected;
     }
 
-    public void setBorderWidthSelected(int borderWidthSelected) {
+    public void setBorderWidthSelected(Integer borderWidthSelected) {
         this.borderWidthSelected = borderWidthSelected;
     }
 
@@ -121,11 +121,11 @@ public class Nodes {
         this.group = group;
     }
 
-    public boolean isHidden() {
+    public Boolean isHidden() {
         return hidden;
     }
 
-    public void setHidden(boolean hidden) {
+    public void setHidden(Boolean hidden) {
         this.hidden = hidden;
     }
 
@@ -154,35 +154,35 @@ public class Nodes {
         this.label = label;
     }
 
-    public boolean isLabelHighlightBold() {
+    public Boolean isLabelHighlightBold() {
         return labelHighlightBold;
     }
 
-    public void setLabelHighlightBold(boolean labelHighlightBold) {
+    public void setLabelHighlightBold(Boolean labelHighlightBold) {
         this.labelHighlightBold = labelHighlightBold;
     }
 
-    public int getLevel() {
+    public Integer getLevel() {
         return level;
     }
 
-    public void setLevel(int level) {
+    public void setLevel(Integer level) {
         this.level = level;
     }
 
-    public int getMass() {
+    public Integer getMass() {
         return mass;
     }
 
-    public void setMass(int mass) {
+    public void setMass(Integer mass) {
         this.mass = mass;
     }
 
-    public boolean isPhysics() {
+    public Boolean isPhysics() {
         return physics;
     }
 
-    public void setPhysics(boolean physics) {
+    public void setPhysics(Boolean physics) {
         this.physics = physics;
     }
 
@@ -218,11 +218,11 @@ public class Nodes {
         this.shapeProperties = shapeProperties;
     }
 
-    public int getSize() {
+    public Integer getSize() {
         return size;
     }
 
-    public void setSize(int size) {
+    public void setSize(Integer size) {
         this.size = size;
     }
 
@@ -234,27 +234,27 @@ public class Nodes {
         this.title = title;
     }
 
-    public int getValue() {
+    public Integer getValue() {
         return value;
     }
 
-    public void setValue(int value) {
+    public void setValue(Integer value) {
         this.value = value;
     }
 
-    public int getY() {
+    public Integer getY() {
         return y;
     }
 
-    public void setY(int y) {
+    public void setY(Integer y) {
         this.y = y;
     }
 
-    public int getX() {
+    public Integer getX() {
         return x;
     }
 
-    public void setX(int x) {
+    public void setX(Integer x) {
         this.x = x;
     }
 

@@ -14,54 +14,54 @@ public class Layout {
     When enabled, the network will use the Kamada Kawai algorithm for initial layout.
     For networks larger than 100 nodes, clustering will be performed automatically to reduce the amount of nodes.
     This can greatly improve the stabilization times.
-    If the network is very interconnected (no or few leaf nodes),
+    If the network is very Integererconnected (no or few leaf nodes),
      this may not work and it will revert back to the old method.
     Performance will be improved in the future.
      */
-    boolean improvedLayout = true;
+    Boolean improvedLayout;
 
     /*
         When true, the layout engine positions the nodes in a hierarchical fashion using default settings.
         For customization you can supply an object.
          */
-    public Hierarchical hierarchical = new Hierarchical();
+    private Hierarchical hierarchical;
 
-    public class Hierarchical {
+    public static class Hierarchical {
         /*
                 Toggle the usage of the hierarchical layout system.
                 If this option is not defined, it is set to true if any of the properties in this object are defined.
                  */
-        boolean enabled = false;
+        Boolean enabled;
         /*
         The distance between the different levels.
          */
-        int levelSeparation = 150;
+        Integer levelSeparation;
         /*
         The direction of the hierarchical layout. The available options are:
         UD, DU, LR, RL. To simplify: up-down, down-up, left-right, right-left.
          */
-        Direction direction = Direction.UD;
+        Direction direction;
         /*
         The algorithm used to ascertain the levels of the nodes based on the data.
         The possible options are: hubsize, directed.Hubsize takes the nodes with the most edges and puts them at the top.
         From that the rest of the hierarchy is evaluated. Directed adheres to the to and from data of the edges.
          A --> B so B is a level lower than A.
          */
-        SortMethod sortMethod = SortMethod.hubsize;
+        SortMethod sortMethod;
 
-        public boolean isEnabled() {
+        public Boolean isEnabled() {
             return enabled;
         }
 
-        public void setEnabled(boolean enabled) {
+        public void setEnabled(Boolean enabled) {
             this.enabled = enabled;
         }
 
-        public int getLevelSeparation() {
+        public Integer getLevelSeparation() {
             return levelSeparation;
         }
 
-        public void setLevelSeparation(int levelSeparation) {
+        public void setLevelSeparation(Integer levelSeparation) {
             this.levelSeparation = levelSeparation;
         }
 
@@ -86,15 +86,15 @@ public class Layout {
         return randomSeed;
     }
 
-    public void setRandomSeed(int randomSeed) {
+    public void setRandomSeed(Integer randomSeed) {
         this.randomSeed = randomSeed;
     }
 
-    public boolean isImprovedLayout() {
+    public Boolean isImprovedLayout() {
         return improvedLayout;
     }
 
-    public void setImprovedLayout(boolean improvedLayout) {
+    public void setImprovedLayout(Boolean improvedLayout) {
         this.improvedLayout = improvedLayout;
     }
 

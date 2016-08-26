@@ -6,10 +6,10 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.vaadin.addon</groupId>
     <artifactId>visjs-addon</artifactId>
-    <version>2.0.0.3</version>
+    <version>2.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <properties>
-        <vaadin.version>7.5.6</vaadin.version>
+        <vaadin.version>7.6.6</vaadin.version>
         <JDK_VERSION>1.8</JDK_VERSION>
         <Implementation-Version>${project.version}</Implementation-Version>
         <Implementation-Title>${project.name}</Implementation-Title>
@@ -25,14 +25,21 @@
     </repositories>
 
     <organization>
-        <name>sameeraroshan</name>
-        <url>https://github.com/sameeraroshan/visjs</url>
+        <name>pwilkin</name>
+        <url>https://github.com/pwilkin/visjs</url>
     </organization>
 
+    <distributionManagement>
+        <repository>
+            <id>syndatis</id>
+            <url>http://192.168.11.13:8080/nexus/content/repositories/snapshots</url>
+        </repository>
+    </distributionManagement>
+
     <scm>
-        <url>https://github.com/sameeraroshan/visjs.git</url>
-        <connection>scm:git:https://github.com/sameeraroshan/visjs.git</connection>
-        <developerConnection>scm:git:https://github.com/sameeraroshan/visjs.git</developerConnection>
+        <url>https://github.com/pwilkin/visjs.git</url>
+        <connection>scm:git:https://github.com/pwilkin/visjs.git</connection>
+        <developerConnection>scm:git:https://github.com/pwilkin/visjs.git</developerConnection>
         <tag>Visjs add-on for Vaadin</tag>
     </scm>
 
@@ -51,11 +58,24 @@
             </roles>
             <timezone>5.30</timezone>
         </developer>
+        <developer>
+            <id>pwilkin</id>
+            <name>Piotr Wilkin</name>
+            <email>piotr.wilkin@syndatis.com</email>
+            <url>http://www.syndatis.com</url>
+            <organization>Syndatis Sp. z o.o.</organization>
+            <organizationUrl>http://www.syndatis.com/</organizationUrl>
+            <roles>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+            <timezone>Europe/Warsaw</timezone>
+        </developer>
     </developers>
 
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/sameeraroshan/visjs/issues</url>
+        <url>https://github.com/pwilkin/visjs/issues</url>
     </issueManagement>
     <licenses>
         <license>

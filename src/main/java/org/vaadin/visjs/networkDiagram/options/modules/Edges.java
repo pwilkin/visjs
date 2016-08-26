@@ -14,32 +14,32 @@ public class Edges {
          or <code>'to;from'</code>, any combination with any seperating symbol is fine. If you want to control the size of
          the arrowheads, you can supply an object.
          */
-    private Arrows arrows = new Arrows();
+    private Arrows arrows;
     private Color color;
-    private boolean dashes = false;
-    private Font font = new Font();
-    private boolean hidden = false;
-    private float hoverWidth = 0.5f;
+    private Boolean dashes;
+    private Font font;
+    private Boolean hidden;
+    private Float hoverWidth;
     private String label;
-    private boolean labelHighlightBold = true;
+    private Boolean labelHighlightBold;
     /*
         * The physics simulation gives edges a spring length. This value can override the length of the spring in rest.*/
-    private int length = 10;
+    private Integer length;
     /*
     The physics simulation gives edges a spring length. This value can override the length of the spring in rest.
      */
-   /* private float length = 100;*/
+   /* private Float length = 100;*/
     /*
     When true, the edge is part of the physics simulation. When false, it will not act as a spring.
      */
-    private boolean physics = true;
+    private Boolean physics;
     /*
    If the value option is specified,
    the width of the edges will be scaled according to the
    properties in this object. Keep in mind that when using scaling,
    the width option is neglected.
     */
-    private Scaling scaling = new Scaling();
+    private Scaling scaling;
 
     /*
         The selectionWidth determines the width of the edge when the edge is selected.
@@ -57,23 +57,23 @@ public class Edges {
         In this simple example multiply the width by 2.
         You can taylor the logic in the function as long as it returns a Number.
         */
-    private int selectionWidth = 1;
+    private Integer selectionWidth;
     /*
     When the to and from nodes are the same, a circle is drawn. This is the radius of that circle.
      */
-    private int selfReferenceSize;
+    private Integer selfReferenceSize;
     /*
     When true, the edge casts a shadow using the default settings.
     This can be further refined by supplying an object.
      */
-    private Shadow shadow = new Shadow();
+    private Shadow shadow;
     /*
     When true, the edge is drawn as a dynamic quadratic bezier curve. The drawing of these curves takes longer than
     that of straight curves but it looks better.There is a difference between dynamic smooth curves and static smooth curves.
     The dynamic smooth curves have an invisible support node that takes part in the physics simulation. If you have a lot of edges,
     you may want to consider picking a different type of smooth curves then dynamic for better performance.
      */
-    private Smooth smooth = new Smooth();
+    private Smooth smooth;
 
 
     /*
@@ -84,12 +84,12 @@ public class Edges {
         When a value is set, the edges' width will be scaled using the options
         in the scaling object defined above.
          */
-   /* private int value; */
+   /* private Integer value; */
 
     /*
         The width of the edge. If value is set, this is not used.
          */
-    private float width = 0.8f;
+    private Float width;
 
     public Arrows getArrows() {
         return arrows;
@@ -107,11 +107,11 @@ public class Edges {
         this.color = color;
     }
 
-    public boolean isDashes() {
+    public Boolean isDashes() {
         return dashes;
     }
 
-    public void setDashes(boolean dashes) {
+    public void setDashes(Boolean dashes) {
         this.dashes = dashes;
     }
 
@@ -123,19 +123,19 @@ public class Edges {
         this.font = font;
     }
 
-    public boolean isHidden() {
+    public Boolean isHidden() {
         return hidden;
     }
 
-    public void setHidden(boolean hidden) {
+    public void setHidden(Boolean hidden) {
         this.hidden = hidden;
     }
 
-    public float getHoverWidth() {
+    public Float getHoverWidth() {
         return hoverWidth;
     }
 
-    public void setHoverWidth(float hoverWidth) {
+    public void setHoverWidth(Float hoverWidth) {
         this.hoverWidth = hoverWidth;
     }
 
@@ -147,36 +147,36 @@ public class Edges {
         this.label = label;
     }
 
-    public boolean isLabelHighlightBold() {
+    public Boolean isLabelHighlightBold() {
         return labelHighlightBold;
     }
 
-    public void setLabelHighlightBold(boolean labelHighlightBold) {
+    public void setLabelHighlightBold(Boolean labelHighlightBold) {
         this.labelHighlightBold = labelHighlightBold;
     }
 
-    public int getLength() {
+    public Integer getLength() {
         return length;
     }
 
-    public void setLength(int length) {
+    public void setLength(Integer length) {
         this.length = length;
     }
 
 
-   /* public float getLength() {
+   /* public Float getLength() {
         return length;
     }
 
-    public void setLength(float length) {
+    public void setLength(Float length) {
         this.length = length;
     }*/
 
-    public boolean isPhysics() {
+    public Boolean isPhysics() {
         return physics;
     }
 
-    public void setPhysics(boolean physics) {
+    public void setPhysics(Boolean physics) {
         this.physics = physics;
     }
 
@@ -188,19 +188,19 @@ public class Edges {
         this.scaling = scaling;
     }
 
-    public int getSelectionWidth() {
+    public Integer getSelectionWidth() {
         return selectionWidth;
     }
 
-    public void setSelectionWidth(int selectionWidth) {
+    public void setSelectionWidth(Integer selectionWidth) {
         this.selectionWidth = selectionWidth;
     }
 
-    public int getSelfReferenceSize() {
+    public Integer getSelfReferenceSize() {
         return selfReferenceSize;
     }
 
-    public void setSelfReferenceSize(int selfReferenceSize) {
+    public void setSelfReferenceSize(Integer selfReferenceSize) {
         this.selfReferenceSize = selfReferenceSize;
     }
 
@@ -228,19 +228,23 @@ public class Edges {
         this.title = title;
     }
 
-    /*public int getValue() {
+    /*public Integer getValue() {
         return value;
     }
 
-    public void setValue(int value) {
+    public void setValue(Integer value) {
         this.value = value;
     }*/
 
-    public float getWidth() {
+    public Float getWidth() {
         return width;
     }
 
-    public void setWidth(float width) {
+    public void setWidth(Float width) {
         this.width = width;
+    }
+
+    public void setWidth(Integer width) {
+        this.width = width == null ? null : (float) width;
     }
 }
