@@ -59,6 +59,18 @@ public class Node extends Nodes {
         setGroup(group);
     }
 
+    public Node(int id, String label, Node.Shape shape) {
+        this.id = Integer.toString(id);
+        setLabel(label);
+        setShape(shape);
+    }
+
+    public Node(String id, String label, Node.Shape shape) {
+        this.id = id;
+        setLabel(label);
+        setShape(shape);
+    }
+
     public Node(String id, String label, Node.Shape shape, String group) {
         this.id = id;
         setLabel(label);
